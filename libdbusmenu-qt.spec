@@ -4,7 +4,7 @@
 #
 Name     : libdbusmenu-qt
 Version  : 0.9.3+16.04.20160218.0ubuntu1
-Release  : 1
+Release  : 2
 URL      : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Source0  : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Summary  : Qt implementation of dbusmenu spec
