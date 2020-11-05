@@ -4,17 +4,18 @@
 #
 Name     : libdbusmenu-qt
 Version  : 0.9.3+16.04.20160218.0ubuntu1
-Release  : 2
+Release  : 3
 URL      : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Source0  : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Summary  : Qt implementation of dbusmenu spec
 Group    : Development/Tools
-License  : LGPL-2.0
+License  : GPL-2.0
 Requires: libdbusmenu-qt-lib = %{version}-%{release}
 Requires: libdbusmenu-qt-license = %{version}-%{release}
 BuildRequires : buildreq-cmake
 BuildRequires : buildreq-kde
 BuildRequires : doxygen
+BuildRequires : qtbase-dev
 
 %description
 # Summary
@@ -27,6 +28,7 @@ Summary: dev components for the libdbusmenu-qt package.
 Group: Development
 Requires: libdbusmenu-qt-lib = %{version}-%{release}
 Provides: libdbusmenu-qt-devel = %{version}-%{release}
+Requires: libdbusmenu-qt = %{version}-%{release}
 
 %description dev
 dev components for the libdbusmenu-qt package.
@@ -59,24 +61,31 @@ license components for the libdbusmenu-qt package.
 
 %prep
 %setup -q -n libdbusmenu-qt-0.9.3-16.04.20160218-0ubuntu1
+cd %{_builddir}/libdbusmenu-qt-0.9.3-16.04.20160218-0ubuntu1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
-export LANG=C
-export SOURCE_DATE_EPOCH=1549463343
+export LANG=C.UTF-8
+export SOURCE_DATE_EPOCH=1604617571
 mkdir -p clr-build
 pushd clr-build
+export GCC_IGNORE_WERROR=1
+export CFLAGS="$CFLAGS -fno-lto "
+export FCFLAGS="$FFLAGS -fno-lto "
+export FFLAGS="$FFLAGS -fno-lto "
+export CXXFLAGS="$CXXFLAGS -fno-lto "
 %cmake ..
 make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1549463343
+export SOURCE_DATE_EPOCH=1604617571
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libdbusmenu-qt
-cp COPYING %{buildroot}/usr/share/package-licenses/libdbusmenu-qt/COPYING
+cp %{_builddir}/libdbusmenu-qt-0.9.3-16.04.20160218-0ubuntu1/COPYING %{buildroot}/usr/share/package-licenses/libdbusmenu-qt/1bc469fc96e9cff231a01253e1e9f1fe9ee05a25
+cp %{_builddir}/libdbusmenu-qt-0.9.3-16.04.20160218-0ubuntu1/debian/copyright %{buildroot}/usr/share/package-licenses/libdbusmenu-qt/65f4da810a0254b9ba513af06dba3cb80d341e0a
 pushd clr-build
 %make_install
 popd
@@ -191,4 +200,5 @@ popd
 
 %files license
 %defattr(0644,root,root,0755)
-/usr/share/package-licenses/libdbusmenu-qt/COPYING
+/usr/share/package-licenses/libdbusmenu-qt/1bc469fc96e9cff231a01253e1e9f1fe9ee05a25
+/usr/share/package-licenses/libdbusmenu-qt/65f4da810a0254b9ba513af06dba3cb80d341e0a
