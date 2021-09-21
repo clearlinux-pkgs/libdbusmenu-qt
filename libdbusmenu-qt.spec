@@ -4,7 +4,7 @@
 #
 Name     : libdbusmenu-qt
 Version  : 0.9.3+16.04.20160218.0ubuntu1
-Release  : 3
+Release  : 4
 URL      : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Source0  : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Summary  : Qt implementation of dbusmenu spec
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1604617571
+export SOURCE_DATE_EPOCH=1632199985
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -81,7 +81,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1604617571
+export SOURCE_DATE_EPOCH=1632199985
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libdbusmenu-qt
 cp %{_builddir}/libdbusmenu-qt-0.9.3-16.04.20160218-0ubuntu1/COPYING %{buildroot}/usr/share/package-licenses/libdbusmenu-qt/1bc469fc96e9cff231a01253e1e9f1fe9ee05a25
@@ -126,7 +126,7 @@ popd
 /usr/share/doc/libdbusmenu-qt5-doc/dir_68267d1309a1af8e8297ef4c3efbcdba.html
 /usr/share/doc/libdbusmenu-qt5-doc/doc.png
 /usr/share/doc/libdbusmenu-qt5-doc/doxygen.css
-/usr/share/doc/libdbusmenu-qt5-doc/doxygen.png
+/usr/share/doc/libdbusmenu-qt5-doc/doxygen.svg
 /usr/share/doc/libdbusmenu-qt5-doc/dynsections.js
 /usr/share/doc/libdbusmenu-qt5-doc/files.html
 /usr/share/doc/libdbusmenu-qt5-doc/folderclosed.png
@@ -159,7 +159,7 @@ popd
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_6.js
 /usr/share/doc/libdbusmenu-qt5-doc/search/classes_0.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/classes_0.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/close.png
+/usr/share/doc/libdbusmenu-qt5-doc/search/close.svg
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_0.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_0.js
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_1.html
@@ -174,7 +174,7 @@ popd
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_5.js
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_6.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_6.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/mag_sel.png
+/usr/share/doc/libdbusmenu-qt5-doc/search/mag_sel.svg
 /usr/share/doc/libdbusmenu-qt5-doc/search/nomatches.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/pages_0.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/pages_0.js
