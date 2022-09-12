@@ -4,7 +4,7 @@
 #
 Name     : libdbusmenu-qt
 Version  : 0.9.3+16.04.20160218.0ubuntu1
-Release  : 4
+Release  : 5
 URL      : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Source0  : https://github.com/unity8-team/libdbusmenu-qt/archive/0.9.3+16.04.20160218-0ubuntu1.tar.gz
 Summary  : Qt implementation of dbusmenu spec
@@ -68,7 +68,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1632199985
+export SOURCE_DATE_EPOCH=1663010952
 mkdir -p clr-build
 pushd clr-build
 export GCC_IGNORE_WERROR=1
@@ -81,7 +81,7 @@ make  %{?_smp_mflags}
 popd
 
 %install
-export SOURCE_DATE_EPOCH=1632199985
+export SOURCE_DATE_EPOCH=1663010952
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/libdbusmenu-qt
 cp %{_builddir}/libdbusmenu-qt-0.9.3-16.04.20160218-0ubuntu1/COPYING %{buildroot}/usr/share/package-licenses/libdbusmenu-qt/1bc469fc96e9cff231a01253e1e9f1fe9ee05a25
@@ -110,6 +110,7 @@ popd
 %defattr(0644,root,root,0755)
 /usr/share/doc/libdbusmenu-qt5-doc/annotated.html
 /usr/share/doc/libdbusmenu-qt5-doc/bc_s.png
+/usr/share/doc/libdbusmenu-qt5-doc/bc_sd.png
 /usr/share/doc/libdbusmenu-qt5-doc/bdwn.png
 /usr/share/doc/libdbusmenu-qt5-doc/classDBusMenuExporter-members.html
 /usr/share/doc/libdbusmenu-qt5-doc/classDBusMenuExporter.html
@@ -125,6 +126,7 @@ popd
 /usr/share/doc/libdbusmenu-qt5-doc/deprecated.html
 /usr/share/doc/libdbusmenu-qt5-doc/dir_68267d1309a1af8e8297ef4c3efbcdba.html
 /usr/share/doc/libdbusmenu-qt5-doc/doc.png
+/usr/share/doc/libdbusmenu-qt5-doc/docd.png
 /usr/share/doc/libdbusmenu-qt5-doc/doxygen.css
 /usr/share/doc/libdbusmenu-qt5-doc/doxygen.svg
 /usr/share/doc/libdbusmenu-qt5-doc/dynsections.js
@@ -139,58 +141,48 @@ popd
 /usr/share/doc/libdbusmenu-qt5-doc/menu.js
 /usr/share/doc/libdbusmenu-qt5-doc/menudata.js
 /usr/share/doc/libdbusmenu-qt5-doc/nav_f.png
+/usr/share/doc/libdbusmenu-qt5-doc/nav_fd.png
 /usr/share/doc/libdbusmenu-qt5-doc/nav_g.png
 /usr/share/doc/libdbusmenu-qt5-doc/nav_h.png
+/usr/share/doc/libdbusmenu-qt5-doc/nav_hd.png
 /usr/share/doc/libdbusmenu-qt5-doc/open.png
 /usr/share/doc/libdbusmenu-qt5-doc/pages.html
-/usr/share/doc/libdbusmenu-qt5-doc/search/all_0.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_0.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/all_1.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_1.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/all_2.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_2.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/all_3.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_3.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/all_4.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_4.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/all_5.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_5.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/all_6.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/all_6.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/classes_0.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/classes_0.js
 /usr/share/doc/libdbusmenu-qt5-doc/search/close.svg
-/usr/share/doc/libdbusmenu-qt5-doc/search/functions_0.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_0.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/functions_1.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_1.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/functions_2.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_2.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/functions_3.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_3.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/functions_4.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_4.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/functions_5.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_5.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/functions_6.html
 /usr/share/doc/libdbusmenu-qt5-doc/search/functions_6.js
+/usr/share/doc/libdbusmenu-qt5-doc/search/mag.svg
+/usr/share/doc/libdbusmenu-qt5-doc/search/mag_d.svg
 /usr/share/doc/libdbusmenu-qt5-doc/search/mag_sel.svg
-/usr/share/doc/libdbusmenu-qt5-doc/search/nomatches.html
-/usr/share/doc/libdbusmenu-qt5-doc/search/pages_0.html
+/usr/share/doc/libdbusmenu-qt5-doc/search/mag_seld.svg
 /usr/share/doc/libdbusmenu-qt5-doc/search/pages_0.js
 /usr/share/doc/libdbusmenu-qt5-doc/search/search.css
 /usr/share/doc/libdbusmenu-qt5-doc/search/search.js
-/usr/share/doc/libdbusmenu-qt5-doc/search/search_l.png
-/usr/share/doc/libdbusmenu-qt5-doc/search/search_m.png
-/usr/share/doc/libdbusmenu-qt5-doc/search/search_r.png
 /usr/share/doc/libdbusmenu-qt5-doc/search/searchdata.js
 /usr/share/doc/libdbusmenu-qt5-doc/splitbar.png
+/usr/share/doc/libdbusmenu-qt5-doc/splitbard.png
 /usr/share/doc/libdbusmenu-qt5-doc/sync_off.png
 /usr/share/doc/libdbusmenu-qt5-doc/sync_on.png
 /usr/share/doc/libdbusmenu-qt5-doc/tab_a.png
+/usr/share/doc/libdbusmenu-qt5-doc/tab_ad.png
 /usr/share/doc/libdbusmenu-qt5-doc/tab_b.png
+/usr/share/doc/libdbusmenu-qt5-doc/tab_bd.png
 /usr/share/doc/libdbusmenu-qt5-doc/tab_h.png
+/usr/share/doc/libdbusmenu-qt5-doc/tab_hd.png
 /usr/share/doc/libdbusmenu-qt5-doc/tab_s.png
+/usr/share/doc/libdbusmenu-qt5-doc/tab_sd.png
 /usr/share/doc/libdbusmenu-qt5-doc/tabs.css
 
 %files lib
